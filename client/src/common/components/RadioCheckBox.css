@@ -1,0 +1,54 @@
+/* RadioCheckBox.css */
+
+/* Hide the default radio button */
+.radioInput {
+    display: none;
+  }
+  
+  /* Style the custom radio button */
+  .customRadio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    user-select: none;
+  }
+  
+  /* The custom radio button */
+  .radioCheckmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  /* When the radio button is checked, change the background color to green */
+  .radioInput:checked + .radioCheckmark {
+    background-color: green;
+  }
+  
+  /* Create the inner dot of the radio button */
+  .radioCheckmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  /* Show the inner dot when checked */
+  .radioInput:checked + .radioCheckmark::after {
+    display: block;
+  }
+  
